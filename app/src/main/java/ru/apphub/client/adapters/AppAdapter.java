@@ -24,7 +24,7 @@ public class AppAdapter extends RecyclerView.Adapter<AppAdapter.AppViewHolder> {
         this.context = context;
     }
 
-    public void setPersons(List<Application> applications) {
+    public void setApplications(List<Application> applications) {
         this.applications = applications;
     }
 
@@ -55,11 +55,11 @@ public class AppAdapter extends RecyclerView.Adapter<AppAdapter.AppViewHolder> {
         }
 
         public void setData(Application app) {
-            TextView name = itemView.findViewById(R.id.title);
-            name.setText(app.getTitle());
+            TextView title = itemView.findViewById(R.id.title);
+            title.setText(app.getTitle());
 
-            TextView phone = itemView.findViewById(R.id.description);
-            phone.setText(app.getDescription());
+            TextView description = itemView.findViewById(R.id.description);
+            description.setText(app.getDescription());
         }
     }
 }
