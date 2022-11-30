@@ -5,10 +5,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -55,6 +58,9 @@ public class AppAdapter extends RecyclerView.Adapter<AppAdapter.AppViewHolder> {
         }
 
         public void setData(Application app) {
+            ImageView icon = itemView.findViewById(R.id.icon);
+            Picasso.get().load("http://10.0.2.2:8080/api/files/" + app.getIcon()).into(icon);
+
             TextView title = itemView.findViewById(R.id.title);
             title.setText(app.getTitle());
 

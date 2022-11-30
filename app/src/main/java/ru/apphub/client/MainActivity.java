@@ -85,17 +85,17 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private List<Application> testApps() {
-        final List<Application> result = new ArrayList<>();
-
-        result.add(new Application("app1", "descr1"));
-        result.add(new Application("app2", "descr2"));
-        result.add(new Application("app3", "descr3"));
-        result.add(new Application("app4", "descr4"));
-        result.add(new Application("app5", "descr5"));
-        result.add(new Application("app6", "descr6"));
-        result.add(new Application("app7", "descr7"));
-
-        return result;
-    }
+//    private List<Application> testApps() {
+//        final List<Application> result = new ArrayList<>();
+//
+//        result.add(new Application("app1", "descr1"));
+//        result.add(new Application("app2", "descr2"));
+//        result.add(new Application("app3", "descr3"));
+//        result.add(new Application("app4", "descr4"));
+//        result.add(new Application("app5", "descr5"));
+//        result.add(new Application("app6", "descr6"));
+//        result.add(new Application("app7", "descr7"));
+//
+//        return result;
+//    }
 }
