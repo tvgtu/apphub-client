@@ -1,6 +1,7 @@
 package ru.apphub.client.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+import ru.apphub.client.ApplicationActivity;
 import ru.apphub.client.R;
 import ru.apphub.client.model.Application;
 
@@ -44,6 +46,14 @@ public class AppAdapter extends RecyclerView.Adapter<AppAdapter.AppViewHolder> {
         Log.i("BIND DATA", "bind date" + position);
         Application app = applications.get(position);
         holder.setData(app);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, ApplicationActivity.class);
+                intent.putExtra("applicationId", app.getId());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
